@@ -156,6 +156,8 @@ public class LogentriesClient {
             } catch (HttpResponseException ex) {
                 Log.e("LogentriesAndroidLogger", "Received status code:" + ex.getStatusCode());
                 Log.e("LogentriesAndroidLogger", "Error message:" + ex.getMessage());
+            } catch (IllegalStateException ex) {
+                Log.e("LogentriesAndroidLogger", "Error message:" + ex.getMessage());
             }
         }
     }
